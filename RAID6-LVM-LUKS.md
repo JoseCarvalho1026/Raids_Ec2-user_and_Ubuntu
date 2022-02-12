@@ -10,7 +10,7 @@
 
 ## Raid 6
 
-◻️ For `gdisk /dev/xvdf` , `gdisk /dev/xvdg`, `gdisk /dev/xvdh` and `gdisk /dev/xvdi`
+◻️ For `gdisk /dev/xvdf` , `gdisk /dev/xvdg`, `gdisk /dev/xvdh` and `gdisk /dev/xvdi` .
 ```
 o Enter for new empty GUID partition table (GPT) ;
 y Enter to confirm your decision ;
