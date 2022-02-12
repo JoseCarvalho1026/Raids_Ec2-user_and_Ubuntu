@@ -65,22 +65,17 @@ ________________________________________________________
 
 ◻️ `cd /mnt` ;
 
-◻️ `mkdir user` ;
-
-◻️ `mkdir info` .
+◻️ `mkdir user` .
 ________________________________________________________
 ◻️ `mount /dev/vg0/lv0 /mnt/user/` ;
-
-◻️ `mount /dev/vg0/lv1 /mnt/info/` ;
 
 ◻️ `cat /etc/mtab` copy the last line ;
 
 ◻️ `nano /etc/fstab` paste the line and add "nofail," or ",nofail" .
 ________________________________________________________
-
 ◻️ `reboot` ;
 
-◻️ `cryptsetup luksOpen /dev/md0 md0_crypt` serve para abrir `md0_crypt` ;
+◻️ `cryptsetup luksOpen /dev/md0 md0_crypt` open `md0_crypt` ;
 
 ◻️ `mount -a` assemble the units ;
 
