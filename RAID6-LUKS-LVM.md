@@ -60,7 +60,7 @@ ________________________________________________________
 ◻️ `lvcreate -n lv1 -l +100%FREE vg0` create lv1 with 500 Mb ;
 
 ◻️ `lvdisplay` show logical volume information .
-________________________________________________________
+
 ◻️ `mkfs.xfs /dev/vg0/lv0` format filesystem ;
 
 ◻️ `mkfs.ext4 /dev/vg0/lv1` format filesystem .
@@ -89,3 +89,7 @@ ________________________________________________________
 ◻️ `mount -a` assemble the units ;
 
 ◻️ `df -hT` see if the mount -a command worked .
+
+◻️ `cryptsetup status /dev/mapper/md0_crypt`
+
+◻️ `cryptsetup luksDump /dev/md0`
