@@ -2,15 +2,15 @@
 
 🔴 1 Instance (Ec2-user or Ubuntu);
 
-🔴 1 Elastic IP (for each instance).
+🔴 1 Elastic IP (for each instance);
 
-🔴 3 volumes (volumes of 1 GB and associate in instance)
+🔴 3 volumes (volumes of 1 GB and associate in instance).
 
 # **In Termius**
 
 ## Raid 5
 
-◻️ For `gdisk /dev/xvdf` , `gdisk /dev/xvdg` and `gdisk /dev/xvdh`
+◻️ For `gdisk /dev/xvdf` , `gdisk /dev/xvdg` and `gdisk /dev/xvdh` .
 ```
 o Enter for new empty GUID partition table (GPT) ;
 y Enter to confirm your decision ;
@@ -55,19 +55,19 @@ ________________________________________________________
 
 ◻️ `cryptsetup luksOpen /dev/vg0/vg0lv0 vg0lv0_crypt` vg0lv0_crypt can be whatever name we want ;
 
-◻️ `mkfs.xfs /dev/mapper/vg0lv0_crypt` format filesystem ;
+◻️ `mkfs.xfs /dev/mapper/vg0lv0_crypt` format filesystem .
 ________________________________________________________
 ### Creating folders
 
 ◻️ `cd /mnt` ;
 
-◻️ `mkdir user` .
-________________________________________________________
+◻️ `mkdir user` ;
+
 ◻️ `mount /dev/mapper/vg0lv0_crypt /mnt/user/` ;
 
 ◻️ `cat /etc/mtab` copy the last line ;
 
-◻️ `nano /etc/fstab` paste the line and add "nofail," or ",nofail" ;
+◻️ `nano /etc/fstab` paste the line and add "nofail," or ",nofail" .
 ________________________________________________________
 ◻️ `reboot` ;
 
@@ -79,4 +79,4 @@ ________________________________________________________
 
 ◻️ `cryptsetup status /dev/mapper/vg0lv0_crypt` ;
 
-◻️ `cryptsetup luksDump /dev/mapper/vg0-vg0lv0` ;
+◻️ `cryptsetup luksDump /dev/mapper/vg0-vg0lv0` .
