@@ -2,15 +2,15 @@
 
 🔴 1 Instance (Ec2-user or Ubuntu);
 
-🔴 1 Elastic IP (for each instance).
+🔴 1 Elastic IP (for each instance);
 
-🔴 4 volumes (volumes of 1 GB and associate in instance)
+🔴 4 volumes (volumes of 1 GB and associate in instance).
 
 # **In Termius**
 
 ## Raid 6
 
-◻️ For `gdisk /dev/xvdf` , `gdisk /dev/xvdg` , `gdisk /dev/xvdh` and `gdisk /dev/xvdi`
+◻️ For `gdisk /dev/xvdf` , `gdisk /dev/xvdg` , `gdisk /dev/xvdh` and `gdisk /dev/xvdi` .
 ```
 o Enter for new empty GUID partition table (GPT) ;
 y Enter to confirm your decision ;
@@ -35,7 +35,7 @@ ________________________________________________________
   Spare Devices : 0
 ```
 ________________________________________________________
-◻️ `cryptsetup luksFormat --hash=sha512 --key-size=512 --cipher=aes-xts-plain64 --verify-passphrase /dev/md0` This will override data on /dev/md0 irrevocably. --- YES
+◻️ `cryptsetup luksFormat --hash=sha512 --key-size=512 --cipher=aes-xts-plain64 --verify-passphrase /dev/md0` This will override data on /dev/md0 irrevocably. --- YES ;
 
 ◻️ `cryptsetup luksOpen /dev/md0 md0_crypt` md0_crypt can be whatever name we want ;
 
@@ -59,7 +59,7 @@ ________________________________________________________
 
 ◻️ `lvcreate -n lv1 -l +100%FREE vg0` create lv1 with 500 Mb ;
 
-◻️ `lvdisplay` show logical volume information .
+◻️ `lvdisplay` show logical volume information ;
 
 ◻️ `mkfs.xfs /dev/vg0/lv0` format filesystem ;
 
@@ -88,8 +88,8 @@ ________________________________________________________
 
 ◻️ `mount -a` assemble the units ;
 
-◻️ `df -hT` see if the mount -a command worked .
+◻️ `df -hT` see if the mount -a command worked ;
 
-◻️ `cryptsetup status /dev/mapper/md0_crypt`
+◻️ `cryptsetup status /dev/mapper/md0_crypt` ;
 
-◻️ `cryptsetup luksDump /dev/md0`
+◻️ `cryptsetup luksDump /dev/md0` .
