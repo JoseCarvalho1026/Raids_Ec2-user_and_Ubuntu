@@ -39,17 +39,17 @@ ________________________________________________________
 
 ◻️ `pvcreate /dev/md0` ;
 
-◻️ `pvscan` show the physical volumes ;
+◻️ `pvscan` shows the physical volumes ;
 
-◻️ `pvdisplay` show detailed information of physical volumes ;
+◻️ `pvdisplay` shows detailed information of physical volumes ;
 
-◻️ `vgcreate vg0 /dev/md0` create volume group ;
+◻️ `vgcreate vg0 /dev/md0` creates volume group ;
 
-◻️ `vgdisplay` show volume group information ;
+◻️ `vgdisplay` shows volume group information ;
 
-◻️ `lvcreate -n vg0lv0 -l +100%FREE vg0` create vg0lv0 with 2G ;
+◻️ `lvcreate -n vg0lv0 -l +100%FREE vg0` creates vg0lv0 with 2G ;
 
-◻️ `lvdisplay` show logical volume information .
+◻️ `lvdisplay` shows logical volume information .
 ________________________________________________________
 ◻️ `cryptsetup luksFormat --hash=sha512 --key-size=512 --cipher=aes-xts-plain64 --verify-passphrase /dev/vg0/vg0lv0` This will override data on /dev/md0 irrevocably. --- YES ;
 
@@ -73,9 +73,9 @@ ________________________________________________________
 
 ◻️ `cryptsetup luksOpen /dev/vg0/vg0lv0 vg0lv0_crypt` open vg0lv0_crypt ;
 
-◻️ `mount -a` assemble the units ;
+◻️ `mount -a` assemblse the units ;
 
-◻️ `df -hT` see if the `mount -a` command worked ;
+◻️ `df -hT` see if the `mount -a` commands worked ;
 
 ◻️ `cryptsetup status /dev/mapper/vg0lv0_crypt` ;
 
