@@ -71,7 +71,7 @@ ________________________________________________________
 
 ◻️ `cat /etc/mtab` copy the last line ;
 
-◻️ `nano /etc/fstab` paste the line and add "nofail," or ",nofail" .
+◻️ `nano /etc/fstab` pastes the line and add "nofail," or ",nofail" .
 ________________________________________________________
 ◻️ `reboot` ;
 
