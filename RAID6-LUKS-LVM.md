@@ -47,23 +47,23 @@ ________________________________________________________
 
 ◻️ `pvcreate /dev/mapper/md0_crypt` ;
 
-◻️ `pvscan` show the physical volumes ;
+◻️ `pvscan` shows the physical volumes ;
 
-◻️ `pvdisplay` show detailed information of physical volumes ;
+◻️ `pvdisplay` shows detailed information of physical volumes ;
 
-◻️ `vgcreate vg0 /dev/mapper/md0_crypt` create volume group ;
+◻️ `vgcreate vg0 /dev/mapper/md0_crypt` creates volume group ;
 
-◻️ `vgdisplay` show volume group information ;
+◻️ `vgdisplay` shows volume group information ;
 
-◻️ `lvcreate -n lv0 -l +75%FREE vg0` create lv0 with 1.5G ;
+◻️ `lvcreate -n lv0 -l +75%FREE vg0` creates lv0 with 1.5G ;
 
-◻️ `lvcreate -n lv1 -l +100%FREE vg0` create lv1 with 500 Mb ;
+◻️ `lvcreate -n lv1 -l +100%FREE vg0` creates lv1 with 500 Mb ;
 
-◻️ `lvdisplay` show logical volume information ;
+◻️ `lvdisplay` shows logical volume information ;
 
-◻️ `mkfs.xfs /dev/vg0/lv0` format filesystem ;
+◻️ `mkfs.xfs /dev/vg0/lv0` formats filesystem ;
 
-◻️ `mkfs.ext4 /dev/vg0/lv1` format filesystem .
+◻️ `mkfs.ext4 /dev/vg0/lv1` formats filesystem .
 ________________________________________________________
 ### Creating folders
 
@@ -77,7 +77,7 @@ ________________________________________________________
 
 ◻️ `mount /dev/vg0/lv1 /mnt/info/` ;
 
-◻️ `cat /etc/mtab` copy the last two lines ;
+◻️ `cat /etc/mtab` copies the last two lines ;
 
 ◻️ `nano /etc/fstab` paste the two lines and add "nofail," or ",nofail" .
 ________________________________________________________
@@ -86,9 +86,9 @@ ________________________________________________________
 
 ◻️ `cryptsetup luksOpen /dev/md0 md0_crypt` serve para abrir `md0_crypt` ;
 
-◻️ `mount -a` assemble the units ;
+◻️ `mount -a` assembles the units ;
 
-◻️ `df -hT` see if the mount -a command worked ;
+◻️ `df -hT` sees if the mount -a command worked ;
 
 ◻️ `cryptsetup status /dev/mapper/md0_crypt` ;
 
