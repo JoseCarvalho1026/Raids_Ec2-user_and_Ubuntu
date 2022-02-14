@@ -39,19 +39,19 @@ ________________________________________________________
 
 ◻️ `pvcreate /dev/md0` ;
 
-◻️ `pvscan` show the physical volumes ;
+◻️ `pvscan` shows the physical volumes ;
 
-◻️ `pvdisplay` show detailed information of physical volumes ;
+◻️ `pvdisplay` shows detailed information of physical volumes ;
 
-◻️ `vgcreate vg0 /dev/md0` create volume group ;
+◻️ `vgcreate vg0 /dev/md0` creates volume group ;
 
-◻️ `vgdisplay` show volume group information ;
+◻️ `vgdisplay` shows volume group information ;
 
-◻️ `lvcreate -n vg0lv0 -l +50%FREE vg0` create vg0lv0 with 1G ;
+◻️ `lvcreate -n vg0lv0 -l +50%FREE vg0` creates vg0lv0 with 1G ;
 
-◻️ `lvcreate -n vg0lv1 -l +10%FREE vg0` create vg0lv1 with 1G ;
+◻️ `lvcreate -n vg0lv1 -l +10%FREE vg0` creates vg0lv1 with 1G ;
 
-◻️ `lvdisplay` show logical volume information .
+◻️ `lvdisplay` shows logical volume information .
 ________________________________________________________
 ◻️ `cryptsetup luksFormat --hash=sha512 --key-size=512 --cipher=aes-xts-plain64 --verify-passphrase /dev/vg0/vg0lv0` This will override data on /dev/md0 irrevocably. --- YES ;
 
@@ -77,19 +77,19 @@ ________________________________________________________
 
 ◻️ `mount /dev/mapper/vg0lv1_crypt /mnt/info/` ;
 
-◻️ `cat /etc/mtab` copy the two last lines ;
+◻️ `cat /etc/mtab` copies the two last lines ;
 
-◻️ `nano /etc/fstab` paste the two lines and add "nofail," or ",nofail" .
+◻️ `nano /etc/fstab` pastes the two lines and add "nofail," or ",nofail" .
 ________________________________________________________
 ◻️ `reboot` ;
 
-◻️ `cryptsetup luksOpen /dev/vg0/vg0lv0 vg0lv0_crypt` open vg0lv0_crypt ;
+◻️ `cryptsetup luksOpen /dev/vg0/vg0lv0 vg0lv0_crypt` opens vg0lv0_crypt ;
 
-◻️ `cryptsetup luksOpen /dev/vg0/vg0lv0 vg0lv1_crypt` open vg0lv1_crypt ;
+◻️ `cryptsetup luksOpen /dev/vg0/vg0lv0 vg0lv1_crypt` opens vg0lv1_crypt ;
 
-◻️ `mount -a` assemble the units ;
+◻️ `mount -a` assembles the units ;
 
-◻️ `df -hT` see if the `mount -a` command worked ;
+◻️ `df -hT` see if the `mount -a` commands worked ;
 
 ◻️ `cryptsetup status /dev/mapper/vg0lv0_crypt` ;
 
