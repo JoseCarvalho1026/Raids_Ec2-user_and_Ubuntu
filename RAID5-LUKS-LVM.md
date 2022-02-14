@@ -47,19 +47,19 @@ ________________________________________________________
 
 ◻️ `pvcreate /dev/mapper/md0_crypt` ;
 
-◻️ `pvscan` show the physical volumes ;
+◻️ `pvscan` shows the physical volumes ;
 
-◻️ `pvdisplay` show detailed information of physical volumes ;
+◻️ `pvdisplay` shows detailed information of physical volumes ;
 
-◻️ `vgcreate vg0 /dev/mapper/md0_crypt` create volume group ;
+◻️ `vgcreate vg0 /dev/mapper/md0_crypt` creates volume group ;
 
-◻️ `vgdisplay` show volume group information ;
+◻️ `vgdisplay` shows volume group information ;
 
-◻️ `lvcreate -n lv0 -l +100%FREE vg0` create lv0 with 2G ;
+◻️ `lvcreate -n lv0 -l +100%FREE vg0` creates lv0 with 2G ;
 
-◻️ `lvdisplay` show logical volume information ;
+◻️ `lvdisplay` shows logical volume information ;
 
-◻️ `mkfs.xfs /dev/vg0/lv0` format filesystem .
+◻️ `mkfs.xfs /dev/vg0/lv0` formats filesystem .
 ________________________________________________________
 ### Creating folders
 
@@ -77,9 +77,9 @@ ________________________________________________________
 
 ◻️ `cryptsetup luksOpen /dev/md0 md0_crypt` open `md0_crypt` ;
 
-◻️ `mount -a` assemble the units ;
+◻️ `mount -a` assemblse the units ;
 
-◻️ `df -hT` see if the mount -a command worked ;
+◻️ `df -hT` sees if the mount -a command worked ;
 
 ◻️ `cryptsetup status /dev/mapper/md0_crypt` ;
 
