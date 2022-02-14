@@ -65,15 +65,15 @@ ________________________________________________________
 
 ◻️ `mount /dev/mapper/vg0lv0_crypt /mnt/user/` ;
 
-◻️ `cat /etc/mtab` copy the last line ;
+◻️ `cat /etc/mtab` copies the last line ;
 
-◻️ `nano /etc/fstab` paste the line and add "nofail," or ",nofail" .
+◻️ `nano /etc/fstab` pastes the line and add "nofail," or ",nofail" .
 ________________________________________________________
 ◻️ `reboot` ;
 
 ◻️ `cryptsetup luksOpen /dev/vg0/vg0lv0 vg0lv0_crypt` open vg0lv0_crypt ;
 
-◻️ `mount -a` assemblse the units ;
+◻️ `mount -a` assemblses the units ;
 
 ◻️ `df -hT` see if the `mount -a` commands worked ;
 
