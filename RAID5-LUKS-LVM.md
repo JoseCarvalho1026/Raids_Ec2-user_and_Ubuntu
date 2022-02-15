@@ -75,9 +75,9 @@ ________________________________________________________
 ________________________________________________________
 ◻️ `reboot` ;
 
-◻️ `cryptsetup luksOpen /dev/md0 md0_crypt` open `md0_crypt` ;
+◻️ `cryptsetup luksOpen /dev/md0 md0_crypt` opens `md0_crypt` ;
 
-◻️ `mount -a` assemblse the units ;
+◻️ `mount -a` assemblses the units ;
 
 ◻️ `df -hT` sees if the mount -a command worked ;
 
