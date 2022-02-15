@@ -71,11 +71,11 @@ ________________________________________________________
 ________________________________________________________
 ◻️ `reboot` ;
 
-◻️ `cryptsetup luksOpen /dev/vg0/vg0lv0 vg0lv0_crypt` open vg0lv0_crypt ;
+◻️ `cryptsetup luksOpen /dev/vg0/vg0lv0 vg0lv0_crypt` opens vg0lv0_crypt ;
 
 ◻️ `mount -a` assemblses the units ;
 
-◻️ `df -hT` see if the `mount -a` commands worked ;
+◻️ `df -hT` sees if the `mount -a` commands worked ;
 
 ◻️ `cryptsetup status /dev/mapper/vg0lv0_crypt` ;
 
