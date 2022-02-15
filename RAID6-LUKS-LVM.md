@@ -1,9 +1,5 @@
 # **In AWS**
 
-🔴 1 Instance (Ec2-user or Ubuntu);
-
-🔴 1 Elastic IP (for each instance);
-
 🔴 4 volumes (volumes of 1 GB and associate in instance).
 
 # **In Termius**
