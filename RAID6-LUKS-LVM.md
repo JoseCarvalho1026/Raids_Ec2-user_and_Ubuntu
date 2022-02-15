@@ -84,7 +84,7 @@ ________________________________________________________
 
 ◻️ `reboot` ;
 
-◻️ `cryptsetup luksOpen /dev/md0 md0_crypt` serve para abrir `md0_crypt` ;
+◻️ `cryptsetup luksOpen /dev/md0 md0_crypt` opens `md0_crypt` ;
 
 ◻️ `mount -a` assembles the units ;
 
